@@ -15,8 +15,10 @@ const wrongLetters = [];
 let selectedWord = getRandomWord();
 
 
+
+
 function getRandomWord() {
-    const words = ["javaScript", "Java", "Python", "ReactJS", "Angular", "Shell", "Ruby"]
+    const words = ["javascript", "java", "python", "react", "angular", "shell", "ruby"]
     return words[Math.floor(Math.random() * words.length)]
 }
 
@@ -26,12 +28,13 @@ function getRandomWord() {
 let stripeOne = document.querySelector('.stripeone')
 
 function displayWord() {
-   
 
     word.innerHTML = `
+    
     ${selectedWord.split('').map(letter => `
     <div class="letter">
     ${correctLetters.includes(letter) ? letter : ''}
+
     </div>
     `).join('')}
     `;
