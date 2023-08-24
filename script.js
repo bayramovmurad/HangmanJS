@@ -53,7 +53,7 @@ let stripe = document.querySelector('.stripe')
 
 function updateWrongLetters(){
     wrongLettersAll.innerHTML = `
-        ${wrongLetters.length>0?'<h3>Hatali harfler</h3>':''}
+        ${wrongLetters.length > 0 ?'<h3>Incorrect letters</h3>':''}
         ${wrongLetters.map(letter => `<span>${letter}</span>`)}
     `;
 
@@ -89,7 +89,7 @@ window.addEventListener("keydown", function (e) {
                 correctLetters.push(letter)
                 displayWord()
             } else {
-                console.log("bu harfi zaten girdiniz");
+                console.log("you have already entered this letter");
             }
         } else {
             if (!wrongLetters.includes(letter)) {
